@@ -262,3 +262,104 @@ html {
 .grid-order .item:nth-of-type(5){
   order: -1;
 }
+
+.grid-align{
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 200px);
+  /* eje X */
+  justify-items: stretch;
+  justify-items: end;
+  justify-items: start;
+  justify-items: center;
+  /* eje Y */
+  align-items: stretch;
+  align-items: end;
+  align-items: start;
+  align-items: center;
+}
+
+.grid-align .item:nth-of-type(4){
+  justify-self: start;
+  align-self: start;
+}
+
+.grid-align-tracks {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 200px);
+  /* justify-content: start;
+  justify-content: end;
+  justify-content: center;
+  justify-content: stretch;
+  justify-content: space-between;
+  justify-content: space-around; */
+  justify-content: space-evenly;
+  /* align-content: start;
+  align-content: end;
+  align-content: center;
+  align-content: stretch;
+  align-content: space-between;
+  align-content: space-around; */
+  align-content: space-evenly;
+}
+
+.grid-min-max{
+  display: grid;
+  /* Definimos SOLO columnas */
+  grid-template-columns: repeat(4, minmax(100px, 200px));
+  grid-template-columns: repeat(4, minmax(min-content, 200px));
+  grid-template-columns: repeat(4, minmax(200px, min-content));
+  grid-template-columns: repeat(4, minmax(200px, max-content));
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
+}
+
+.grid-repeat{
+  display: grid;
+  grid-template-columns: repeat(4, 10% 20% 30% 40%);
+  grid-template-columns: repeat(1, 10% 20% 30% 40%);
+  grid-template-columns: repeat(2, 1fr 2fr);
+  grid-auto-rows: repeat(2, 50px 200px);
+  grid-auto-rows: 150px;
+}
+
+/* Grid dinámico */
+.grid-dynamics{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 280px));
+
+  justify-content: center;
+}
+
+.grid-responsive{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1vw;
+}
+
+/* Grid aninado */
+.grid-nested{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Sub-grid */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.sub-grid{
+  grid-column: span 3;
+  grid-row: span 2;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
