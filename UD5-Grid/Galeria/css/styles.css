@@ -63,7 +63,7 @@ figure {
 }
 
 figure:hover {
-    box-shadow: 2px 5px 10px goldenrod;
+    box-shadow: 10px 10px 10px goldenrod;
 }
 
 figure:hover img {
