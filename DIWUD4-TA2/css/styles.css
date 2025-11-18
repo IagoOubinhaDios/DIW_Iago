@@ -1,0 +1,121 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-primaria: 'Courier New', Courier, monospace;
+    --ff-hs: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    font-family: var(--ff-primaria);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #707070;
+    color: white;
+}
+
+footer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    font-weight: bold;
+    background-color: #707070;
+    color: white;
+}
+
+footer:nth-child(2), img {
+    float: right;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 15%;
+    float: left;
+}
+
+#content {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 85%;
+    float: right;
+}
+
+nav ul {
+    list-style: none inside none;
+    text-align: center;
+}
+
+nav ul li {
+    padding-top: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--ff-hs);
+}
+
+#principal {
+    text-align: center;
+    color: black;
+}
+
+p, ul {
+    padding: 10px;
+}
+
+p, li {
+    font-size: 0.8rem;
+}
+
+nav ul li{
+    font-size: 1.5rem;
+}
+
+#left ul, #right ul {
+    list-style: circle inside none;
+}
+
+a {
+    color: black;
+}
+
+li a:hover {
+    text-decoration: none;
+    background-color: #a9a9a9;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+#left p a{
+    font-style: italic;
+}
+
+section h2, article h2 {
+    font-size: 34px;
+}
+
