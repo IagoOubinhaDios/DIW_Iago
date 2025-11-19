@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+
+:root {
+  --main-letra-color:#415840;
+  --main-letra-dark-color: black;
+  --main-fondo-color: #ebe2e5;
+  --menu-fondo-color: #f3c5d9;
+  --page-fondo-color: #feffff;
+  font: 16px/1.5 "Dosis", sans-serif;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 32px;
+}
+
+body>* {
+  padding: 20px;
+}
+
+
+/*********** cabecera **********/
+.cabecera {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  justify-content: flex-start;
+}
+
+.cabecera nav{
+  justify-content: center;
+  align-self: center;
+}
+
+.cabecera nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 75vh;
+}
+
+.cabecera nav ul li {
+  width: 25%;
+  height: 100%;
+  text-align: center;
+}
+
+.cabecera nav ul li:hover {
+  text-decoration: underline;
+  background-color: var(--menu-fondo-color);
+  border-style: solid;
+  border-radius: 5%;
+}
+
+.cta-contact {
+  justify-content: flex-end;
+  align-self: center;
+}
+
+/********** contenido principal de la página ***********/
+main {
+  background-image: url(/Floristeria-con-Flexbox/img/fondo.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+main section {
+  text-align: center;
+}
+
+/******* galeria ****/
+
+
+/***** estilo de la tienda *****/
+
+
+/********* pie ********/
+footer {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-self: center;
+  justify-content: space-between;
+}
+
+.accesibilidad {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-around;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-around;
+}
+
+
+/****** Media Queries ************/
+

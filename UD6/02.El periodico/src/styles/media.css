@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+::cue {
+    background-color: rgba(0, 0, 0, 0.3);
+    color:orange;
+    font: 1.2rem Sans serif;
+    text-shadow: 1px 1px 2pxx black;
+}
+
+::cue(v[voice=padre]) {
+    font-family: Georgia;
+    color: white;
+    font-size: 1.5rem;
+}
+
+::cue(v[voice=narrador]) {
+    font-family: Verdana;
+    font-size: 1.7rem;
+}
+
+::cue(.fin) {
+    font-family: 'Franklin Gothic Medium';
+    color: brown;
+    background-color: rgba(255, 255, 255, 0.546);
+}
+
+/* Estilos video y audio */
+audio, video {
+    max-width: 95%;
+    box-shadow: 10px 15px 20px rgb(44, 43, 43);
+    margin: 1% auto;
+    border-radius: 20px;
+}
