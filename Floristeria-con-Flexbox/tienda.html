@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="cabecera">
+        <h1 class="logo" hidden>Arte Floral</h1>
+        <a href="index.html" class="logo">
+          <picture>
+            <source media="(min-width: 1500px)" srcset="./img/logoAF-250.png">
+            <source media="(min-width: 1200px)" srcset="./img/logoAF-170.png">
+            <source media="(min-width: 768px)" srcset="./img/logoAF-150.png">
+            <source media="(min-width: 1200px)" srcset="./img/logoAF-250.png, ./img/logoAF-250x2.png 2x">
+            <source media="(min-width: 768px)" srcset="./img/logoAF-150.png, ./img/logoAF-250x2.png 2x">
+            <img src="./img/logoAF-150.png" srcset="./img/logoAF-170.png 2x" alt="Enlace a la página principal de la Floristería Arte Floral">
+          </picture> <!--srcset="./img/logo-200.png 400w, ./img/logo-400.png 1400w"-->
+        </a>
+        <button class="cta-contact">Contacta</button>
+        <nav>
+          <ul>
+            <li><a href="" id="activa">Inicio</a></li>
+            <li><a href="flores.html">Flores</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="">Nosotros</a></li>
     
+          </ul>
+        </nav>
+    </header>
 </body>
 </html>
