@@ -8,8 +8,8 @@
       Práctica 1
 
       Página Web del Cine Penguin Royal Wedding 
-      Autor: 
-      Fecha:   
+      Autor: Iago Oubiña Dios
+      Fecha:   28/11/2025
 
       Fichero:   index.html
 
@@ -20,6 +20,7 @@
     <title>Cinema Penguin: Royal Wedding (1951)</title>
     <link href="css/cp_base.css" rel="stylesheet" />
     <link href="css/cp_styles.css" rel="stylesheet" />
+    <link href="css/cp_media.css" rel="stylesheet" />
 
 </head>
 
@@ -104,7 +105,20 @@
             </p>
             <p>El mayor logro musical de Lane puede ser su descubrimiento de una niña de 11 años llamada Frances Gumm, a
                 quien el mundo conoce ahora como Judy Garland.</p>
-                </aside>
+            <audio>
+                <source src="./audio/cp_overture.mp3" type="audio/mp3">
+                <source src="./audio/cp_overture.ogg" type="audio/ogg">
+                <embed src="./audio/cp_overture.mp3" type="audio/mp3" width="250" height="50" 
+                       controller="yes" autoplay="no" showcontrols="yes" autostart="no">
+                <embed src="./audio/cp_overture.ogg" type="audio/ogg" width="250" height="50" 
+                       controller="yes" autoplay="no" showcontrols="yes" autostart="no">
+                <p>
+                    <em> Tu navegador no soporta el audio
+                        <a href="./audio/cp_overture.mp3">Descarga el fichero de testimonio del terremoto</a>
+                    </em>
+                </p>
+            </audio>
+        </aside>
 
         <aside>
             <h1>En el punto de mira</h1>
@@ -113,7 +127,16 @@
                 decorado dentro de una jaula giratoria con una cámara fija.
                 Cuando la jaula giraba, Astaire bailaba sin problemas por los cuatro lados de la caja, creando la
                 ilusión de ingravidez.</p>
-
+            <video controls poster="./img/cp_photo2.png" class="video" preload="metadata" aria-details="transcription" aria-label="Baile del techo">
+                <source src="./video/cp_dance.mp4" type="video/mp4">
+                <source src="./video/cp_dance.webm" type="video/webm">
+                <track kind="subtitles" src="./video/cp_captions_txt.vtt" label="Español" srclang="es" default>
+                <p>
+                    <em> Su navegador no soporta HTML:5. Para reproducir este video, puede descargarlo con el siguiente 
+                        <a href="./video/cp_dance.mp4">enlace</a>.
+                   </em>
+                </p>
+            </video>
         </aside>
     </section>
 

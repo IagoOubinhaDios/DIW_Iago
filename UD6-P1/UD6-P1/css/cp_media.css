@@ -6,16 +6,48 @@
    Práctica 1
 
    Página Web del Cine Penguin Royal Wedding 
-   Autor: 
-   Fecha:   
+   Autor: Iago Oubiña Dios
+   Fecha:   28/11/2025
 
    Fichero:   cp_media.css
 
 */
 
 /* Estilos de reproducción de audio y vídeo */
+audio {
+   width: 90%;
+   display: block;
+   margin-top: auto;
+   margin-bottom: auto;
+   margin-right: 10px;
+   margin-left: 10px;
+   border-radius: 26px;
+   box-shadow: 8px 8px 15px rgb(51, 51, 51);
+}
 
+video {
+   width: 90%;
+   display: block;
+   margin-top: auto;
+   margin-bottom: auto;
+   margin-right: 10px;
+   margin-left: 10px;
+   border-radius: 26px;
+   box-shadow: rgb(51, 51, 51) 8px 8px 15px;
+}
 
+::cue {
+   background-color: rgba(0, 0, 0, 0.3);
+   color: orange;
+   font-size: 1.2em;
+   font-family: serif;
+}
+
+::cue(c){
+   font-size: 2.5em;
+   font-family: serif;
+   text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+}
 
 /* Estilos de pista */
 
