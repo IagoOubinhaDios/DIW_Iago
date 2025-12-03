@@ -82,8 +82,8 @@
 }
 
 .contain-car-2 .rueda {
-  animation: spin 4s steps(8, end) forwards;
-  -webkit-animation: spin 4s steps(8, end) forwards;
+  animation: spin 3s steps(8, end) forwards;
+  -webkit-animation: spin 3s steps(8, end) forwards;
 }
 
 .rueda-right {
