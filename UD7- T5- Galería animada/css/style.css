@@ -1,0 +1,108 @@
+@import "https://unpkg.com/open.props";
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+:root{
+    --big-tile-size: 20vmin;
+    --scale: 0.4;
+    --rotation: 270deg;
+    --tile-size: calc(var(--big-tile-size) / 3);
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: var(--sand-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    width: 80%;
+    height: 60%;
+}
+
+ul {
+    list-style-type: none;
+    display: grid;
+    gap: 1vmin;
+    grid-template: repeat(9, var(--tile-size)) / repeat(9, var(--tile-size));
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(var(--scale));
+}
+
+li {
+    max-inline-size: 100%;
+    border-radius: var(--radius-2);
+    background-color: hsl(0 0% 75% / 0.2);
+    position: relative;
+    fill: none;
+    animation: scale-up 1s both;
+}
+
+li:nth-of-type(1){
+    grid-area: 2/2/1/4;
+}
+
+li:nth-of-type(2) {
+    grid-area: 6/8/2/4;
+}
+
+li:nth-of-type(3) {
+    grid-area: 1/4/4/7;
+}
+
+li:nth-of-type(4) {
+    grid-area: 4/7/4/7;
+}
+
+li:nth-of-type(5) {
+    grid-area: 7/9/4/6;
+}
+
+li:nth-of-type(6) {
+    grid-area: 2/4/7/9;
+}
+
+li:nth-of-type(7) {
+    grid-area: 4/7/7/10;
+}
+
+li:nth-of-type(8) {
+    grid-area: 7/10/6/9;
+}
+
+img {
+    --rotation: -270deg;
+    height: 200%;
+    min-width: 200%;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: scale-up 1s both;
+}
+
+@keyframes scale-up{
+    0%{
+        transform: translateX(-50%) translateY(-50%);
+        scale: var(--scale);
+        rotation: 0deg;
+    }
+    100%{
+        transform: translateX(-50%) translateY(-50%);
+        scale: 1;
+        rotation: var(--rotation);
+    }
+}

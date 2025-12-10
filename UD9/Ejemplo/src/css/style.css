@@ -1,0 +1,55 @@
+/* Estilos para el blog de SASS */
+/* Estilos generales */
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  font: 16px/1.6;
+  font-family: var(--fuente-primaria);
+}
+
+header, footer {
+  background-color: violet;
+}
+header h1, footer h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-family: var(--fuente-secundaria);
+}
+
+main {
+  flex: 1;
+}
+main .articulo {
+  padding: 1rem;
+}
+main h2 {
+  font-size: 2rem;
+  font-family: var(--fuente-secundaria);
+  padding-left: 1rem;
+  background-color: rgba(238, 130, 238, 0.348);
+  border-radius: 5px;
+}
+main p {
+  padding: 0.8rem;
+}
+main p.autor {
+  font-style: italic;
+}
+main p a {
+  color: #901490;
+  padding: 4px;
+}
+main p::selection {
+  background-color: rgba(238, 130, 238, 0.348);
+}
+
+/*# sourceMappingURL=style.css.map */
