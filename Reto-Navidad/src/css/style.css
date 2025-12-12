@@ -1,0 +1,106 @@
+/**
+ *
+ * Hoja para el layout
+ *
+ */
+
+
+
+/* === RESET Y ESTILOS GENERALES === */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: rgba(0, 0, 0, 0.5);
+  --bg-color-secundario: #3b4338;
+  --bg-color-card: rgba(255, 255, 255, 0.08);
+  --color-texto: #ffffff;
+  --color-hover: #ca393f;
+  --color-borde: rgba(255, 215, 0, 0.2);
+  --color-terciario: #ffd700;
+  --size-h1: 3.5rem;
+  --font-display: 'Mountains', serif;
+  --font-titulos: 'Whisper', cursive;
+  --font-titulos2: 'Merry Chirmast Flag', cursive;
+  --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  
+  font: 12px/1.6 "Montserrat", "Segoe UI", "sans-serif";
+  color: var(--color-texto);
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header a img{
+  max-width: 50%;
+  max-height: 50%;
+  border-radius:100%;
+  animation: transparencia 3s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes transparencia{
+  100% {
+    filter: opacity(.5);
+  }
+}
+
+header ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+
+body {
+  /* Rojo oscuro como fondo */
+  background: linear-gradient(to bottom, #8b0000, #660000);
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer ul{
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  text-decoration: none;
+}
+
+li{
+  padding: 10%;
+  justify-content: space-around;
+  list-style: none;
+}
+
+li a:hover {
+  color: var(--color-terciario);
+}
+
+.felicitaciones .cards{
+  display: grid;
+}
+
+.main .cards{
+  display: flex;
+  flex-direction: row;
+}
