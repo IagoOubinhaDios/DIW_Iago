@@ -64,6 +64,31 @@
       <h2>Carta a Papá Noel</h2>
       <!-- Por diseño podemos emplear un div para agrupar elementos en caso de que el contenido interior 
        emplee la semántica correcta de html 5, pero solo por motivos maquetado-->
+      <div>
+        <video controls poster="./assets/img/fondo2.jpg" class="video" preload="metadata" aria-details="transcription" aria-label="Carta a Papa Noel">
+          <source src="./assets/videos/Mensaje.mp4" type="video/mp4">
+          <track kind="subtitles" src="./assets/videos/cp_captions_txt.vtt" label="Español" srclang="es" default>
+          <p>
+              <em> Su navegador no soporta HTML:5. Para reproducir este video, puede descargarlo con el siguiente 
+                  <a href="./assets/videos/Mensaje.mp4">enlace</a>.
+             </em>
+          </p>
+        </video>
+        <form>
+          <h3>Datos Personales</h3>
+          <label for="nombre">Nombre: </label>
+          <input type="text" name="nombre" >
+          <label for="edad">Edad: </label>
+          <input type="text" name="edad">
+          <label for="email">Correo electrónico: </label>
+          <input type="text" name="email">
+        </form>
+        <form>
+          <h3>Carta</h3>
+          <textarea class="carta"></textarea>
+        </form>
+        <button type="submit">Enviar</button>
+      </div>
     </section>
   </main>
 

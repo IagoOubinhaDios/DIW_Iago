@@ -3,3 +3,55 @@
  * Hoja para importar las fuentes
  *
  */
+
+@font-face {
+    font-family: 'MerryChristmasFlake';
+    src: url("../../assets/font/MerryChistmas/MerryChristmasFlake.ttf") format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MerryChristmasStar';
+    src: url("../../assets/font/MerryChistmas/MerryChristmasStar.ttf") format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat Italic';
+    src: url("../../assets/font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format(truetype);
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MountainofChristmas';
+    src: url("../../assets/font/Montserrat/Montserrat-VariableFont_wght.ttf") format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MountainsofChristmas Bold';
+    src: url("../../assets/font/Mountains_of_Christmas/MountainsofChristmas-Bold.ttf") format(truetype);
+    font-style: bold;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MountainsofChristmas Regular';
+    src: url("../../assets/font/Mountains_of_Christmas/MountainsofChristmas-Regular.ttf") format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Wihsper';
+    src: url("../../assets/font/Whisper/Whisper-Regular.ttf") format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
