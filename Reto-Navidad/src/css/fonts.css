@@ -26,7 +26,7 @@
 }
 
 @font-face {
-    font-family: 'MountainofChristmas';
+    font-family: 'Montserrat';
     src: url("../../assets/font/Montserrat/Montserrat-VariableFont_wght.ttf") format(truetype);
     font-style: normal;
     font-weight: normal;
@@ -40,14 +40,14 @@
 }
 
 @font-face {
-    font-family: 'MountainsofChristmas Regular';
+    font-family: 'MountainsofChristmas';
     src: url("../../assets/font/Mountains_of_Christmas/MountainsofChristmas-Regular.ttf") format(truetype);
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
-    font-family: 'Wihsper';
+    font-family: 'Whisper';
     src: url("../../assets/font/Whisper/Whisper-Regular.ttf") format(truetype);
     font-style: normal;
     font-weight: normal;

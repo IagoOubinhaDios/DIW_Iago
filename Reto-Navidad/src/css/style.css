@@ -8,6 +8,7 @@
 
 /* === RESET Y ESTILOS GENERALES === */
 @import url("fonts.css");
+@import url("media.css");
 
 *,
 *::after,
@@ -33,9 +34,24 @@
   
   font: 12px/1.6 "Montserrat", "Segoe UI", "sans-serif";
   color: var(--color-texto);
+  max-width: 100vw;
+}
+
+body {
+  /* Rojo oscuro como fondo */
+  background: linear-gradient(to bottom, #8b0000, #660000);
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 header{
+  padding-right: 10%;
+  max-width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -49,28 +65,11 @@ header a img{
   animation-direction: alternate;
 }
 
-@keyframes transparencia{
-  100% {
-    filter: opacity(.5);
-  }
-}
-
 header ul{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   list-style: none;
-}
-
-body {
-  /* Rojo oscuro como fondo */
-  background: linear-gradient(to bottom, #8b0000, #660000);
-  min-height: 100vh;
-  background-color: #f0f0f0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
 }
 
 footer{
@@ -84,18 +83,110 @@ footer ul{
   flex-direction: row;
 }
 
+footer ul li {
+  padding: 10%;
+}
+
+h2 {
+  font-size: 125px;
+  font-family: 'Whisper';
+}
+
+#portada {
+  background-image: url("../../assets/img/fondo2.jpg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#portada h1 {
+  font-family: 'MerryChristmasFlake';
+  font-size: 200px;
+  text-shadow: var(--bg-color) 5px 5px 5px;
+}
+
+#portada h2 {
+  font-family: 'Whisper';
+}
+
+#portada p{
+  font-size: 30px;
+}
+
+#portada button{
+  width: 400px;
+  height: 50px;
+  font-family: 'Montserrat';
+  color: var(--color-texto);
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #8b0000;
+}
+
 a {
   text-decoration: none;
 }
 
+ul{
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: space-around;
+}
+
 li{
-  padding: 10%;
   justify-content: space-around;
   list-style: none;
 }
 
-li a:hover {
+h1, h2, h3, .cards li i{
   color: var(--color-terciario);
+}
+
+.cards {
+  max-width: 90%;
+  justify-self: center;
+}
+
+.cards li {
+  max-width: 20%;
+  font-size: 30px;
+  background-color: #8b0000;
+  border-style: solid;
+  border-width: 1px;
+  border-color: chocolate;
+  border-radius: 5%;
+}
+
+.cards li i{
+  animation: transparencia 3s infinite;
+}
+
+.menu li {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 5%;
+}
+
+.menu li a:hover {
+  color: var(--color-terciario);
+}
+
+#carta {
+  margin: 5%;
+  background-color: #8b0000;
+  border-style: solid;
+  border-width: 1px;
+  border-color: chocolate;
+}
+
+#carta div {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: space-around;
+}
+
+#carta div form {
+  display: flex;
+  flex-direction: column;
 }
 
 .felicitaciones .cards{
@@ -105,4 +196,13 @@ li a:hover {
 .main .cards{
   display: flex;
   flex-direction: row;
+}
+
+@keyframes transparencia{
+  50%{
+    filter: opacity(.25);
+  }
+  100% {
+    filter: opacity(.5);
+  }
 }

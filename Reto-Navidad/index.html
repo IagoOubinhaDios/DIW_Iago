@@ -32,7 +32,12 @@
 
   <main class="main">
     <!-- PORTADA CENTRAL -->
-    
+    <section id="portada">
+      <h1>Mercadillo Navideño</h1>
+      <h2>¡Feliz Navidad 2025!</h2>
+      <p>Que la paz, la alegría y el amor llenen tu hogar en estas fiestas</p>
+      <button type="submit">Descubre los Regalos</button>
+    </section>
 
     <!-- CONTENIDO PRINCIPAL -->
      <ul class="cards">
@@ -60,8 +65,8 @@
 
 
     <!-- SECCIÓN CARTA-->
+    <h2>Carta a Papá Noel</h2>
     <section id="carta">
-      <h2>Carta a Papá Noel</h2>
       <!-- Por diseño podemos emplear un div para agrupar elementos en caso de que el contenido interior 
        emplee la semántica correcta de html 5, pero solo por motivos maquetado-->
       <div>
@@ -77,17 +82,15 @@
         <form>
           <h3>Datos Personales</h3>
           <label for="nombre">Nombre: </label>
-          <input type="text" name="nombre" >
+          <input type="text" id="nombre" >
           <label for="edad">Edad: </label>
-          <input type="text" name="edad">
+          <input type="text" id="edad">
           <label for="email">Correo electrónico: </label>
-          <input type="text" name="email">
-        </form>
-        <form>
+          <input type="text" id="email">
           <h3>Carta</h3>
           <textarea class="carta"></textarea>
+          <button type="submit">Enviar</button>
         </form>
-        <button type="submit">Enviar</button>
       </div>
     </section>
   </main>
