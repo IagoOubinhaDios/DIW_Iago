@@ -65,31 +65,33 @@
 
 
     <!-- SECCIÓN CARTA-->
-    <h2>Carta a Papá Noel</h2>
     <section id="carta">
+      <h2>Carta a Papá Noel</h2>
       <!-- Por diseño podemos emplear un div para agrupar elementos en caso de que el contenido interior 
        emplee la semántica correcta de html 5, pero solo por motivos maquetado-->
       <div>
-        <video controls poster="./assets/img/fondo2.jpg" class="video" preload="metadata" aria-details="transcription" aria-label="Carta a Papa Noel">
-          <source src="./assets/videos/Mensaje.mp4" type="video/mp4">
-          <track kind="subtitles" src="./assets/videos/cp_captions_txt.vtt" label="Español" srclang="es" default>
-          <p>
-              <em> Su navegador no soporta HTML:5. Para reproducir este video, puede descargarlo con el siguiente 
-                  <a href="./assets/videos/Mensaje.mp4">enlace</a>.
-             </em>
-          </p>
-        </video>
-        <form>
+        <div class="video">
+          <video controls poster="./assets/img/fondo2.jpg" class="video" preload="metadata" aria-details="transcription" aria-label="Carta a Papa Noel">
+            <source src="./assets/videos/Mensaje.mp4" type="video/mp4">
+            <track kind="subtitles" src="./assets/videos/cp_captions_txt.vtt" label="Español" srclang="es" default>
+            <p>
+                <em> Su navegador no soporta HTML:5. Para reproducir este video, puede descargarlo con el siguiente 
+                    <a href="./assets/videos/Mensaje.mp4">enlace</a>.
+               </em>
+            </p>
+          </video>
+        </div>
+        <form action="" method="">
           <h3>Datos Personales</h3>
-          <label for="nombre">Nombre: </label>
-          <input type="text" id="nombre" >
-          <label for="edad">Edad: </label>
-          <input type="text" id="edad">
-          <label for="email">Correo electrónico: </label>
-          <input type="text" id="email">
+          <p><label for="nombre">Nombre: </label>
+          <input type="text" id="nombre" ></p>
+          <p><label for="edad">Edad: </label>
+          <input type="text" id="edad"></p>
+          <p><label for="email">Correo electrónico: </label>
+          <input type="text" id="email"></p>
           <h3>Carta</h3>
-          <textarea class="carta"></textarea>
-          <button type="submit">Enviar</button>
+          <textarea></textarea>
+          <button>Enviar</button>
         </form>
       </div>
     </section>

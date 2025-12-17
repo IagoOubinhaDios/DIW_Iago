@@ -6,12 +6,19 @@
 @import url("fonts.css");
 
 video {
-    width: 50%;
-    height: 50%;
+    justify-self: center;
+    align-self: center;
+    max-width: 720px;
 }
 
 ::cue{
     font-family: 'MountainsofChristmas';
     color: #ffd700;
+    font-size: 1.4rem;
+}
+
+::cue(c){
+    font-family: 'MerryChristmasFlake';
+    font-size: 2rem;
 }
  
