@@ -9,6 +9,7 @@ video {
     justify-self: center;
     align-self: center;
     max-width: 720px;
+    border: 20px solid #ffd700;
 }
 
 ::cue{
