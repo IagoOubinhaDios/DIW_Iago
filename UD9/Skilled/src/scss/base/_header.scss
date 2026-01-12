@@ -1,0 +1,20 @@
+// Módulo para los estilos de la cabecera
+@use "../utilities/variables" as var;
+@use "../utilities/mixins";
+
+
+/*=============================================
+=            Estilos del header            =
+=============================================*/
+header {
+    padding: 1rem;
+    @include mixins.flex($justify: space-between);
+    h1 {
+        font: {
+            weight: bold;
+            size: var.$tam-h1 * 1rem;
+        }
+    }
+}
+
+

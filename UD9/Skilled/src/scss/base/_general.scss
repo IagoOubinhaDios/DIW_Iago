@@ -1,5 +1,6 @@
 // Módulo de reglas generales
 @use "../utilities/variables" as var;
+@use "../utilities/mixins";
 
 :root {
     font: {
@@ -73,4 +74,10 @@ nav{
     &:hover{
         background: var.$bg-hover;
     }
+}
+
+/* Estilos del footer */
+footer {
+    padding: 1rem;
+    text-align: center;
 }

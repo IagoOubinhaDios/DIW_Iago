@@ -1,9 +1,22 @@
 // Módulo para los mixins
+
 @mixin flex($direccion: row, $wrap: wrap, $justify: center, $align: center, $gap: 1rem){
     display: flex;
     flex-flow: $direccion $wrap;
     justify-content: $justify;
     align-items: $align;
     align-content: $align;
+    gap: $gap;
+}
+
+// mixin para maquetar con grid
+
+@mixin grid($columnas, $filas: null, $justify-content: center, $justify-items: null, $align-content: center, $align-items: null, $gap: null){
+    display: grid;
+    grid-template-columns: $columnas;
+    grid-template-rows: $filas;
+    justify-content: $justify-content;
+    align-content: $align-content;
+    align-items: $align-items;
     gap: $gap;
 }
