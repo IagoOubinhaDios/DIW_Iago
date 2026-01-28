@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./src/js/menu.js" defer></script>
     <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Netflix</title>
 </head>
 <body>
     <header>
         <div id="cabecera">
-            <h1><img src=""></h1>
+            <h1><img src="./img/logo-160.jpg"></h1>
             <a href="" id="nav__open" class="nav__btn">
                 <i class="fa-solid fa-bars"></i>
             </a>
@@ -22,26 +24,26 @@
                     <li class="menu__item">Películas</li>
                     <li class="menu__item">Novedades más vistas</li>
                     <li class="menu__item">Mi lista</li>
-                    <li class="menu__item"><i class="fa-thin fa-magnifying-glass"></i></li>
+                    <li class="menu__item"><i class="fa-solid fa-magnifying-glass"></i></li>
                     <li class="menu__item">Infantil</li>
                     <li class="menu__item"><i class="fa-regular fa-bell"></i></li>
-                    <li class="menu__item"><!--Icono usuario--></li>
+                    <li class="menu__item"><i class="fa-regular fa-user"></i></li>
                 </ul>
             </nav>
         </div>
     </header>
     <body>
         <main>
-            <video controls poster="" class="video" preload="metadata" 
-                aria-details="transcription" aria-label="">
-                <source src="" type="">
-                <p>
-                    <em>
-                        Su navegador no soporta HTML:5. Para reproducir este video, puede descargarlo con el siguiente 
-                        <a href="./assets/videos/terremoto.mp4">enlace</a>.
-                    </em>
-                </p>
-            </video>
+            <input type="checkbox" data-animation-pause id="pause" class="hidden" />
+            <div class="slider">
+                <div class="slides">
+                    <iframe src="https://www.youtube.com/embed/nQ7nIbT0tzA" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/He163tPToQQ" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/N9KrjG6DdQc" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/p_-_MPVg968" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/9uF4XjvS_Z0" allowfullscreen></iframe>
+                </div>
+            </div>
             <section class="guionistas">
                 <h2>Guionistas aclamados</h2>
                 <ul>
