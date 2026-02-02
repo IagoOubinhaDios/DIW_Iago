@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import "./animaciones.css";
+@import "./fonts.css";
 /* importa las fuentes y el resto de hojas de estilos */
 /*=============================================
 =            Estilos generales            =
@@ -15,7 +17,7 @@
   --color-fondo-2: rgba(10, 9, 24, 0.895);
   --color-fondo-claro: #edf2f8;
 
-  --size-h1: 2.5rem;
+  --size-h1: 3.5rem;
   --fuente-secundaria: 'Merriweather', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   --fuente-primaria: 'Times New Roman', Times, serif;
   /* define una variable para las transiciones de forma que se aplique a todas
@@ -36,47 +38,6 @@ body {
   margin: 0 auto;
 }
 
-header {
-  background-image: url("../assets/img/puertodeportivo-vilanova.jpg");
-  opacity: .8;
-  height: 80vh;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-header p {
-  max-width: 50%;
-  text-align: center;
-}
-
-#servicios {
-  height: 75vh;
-  background-image: url("../assets/img/puertodeportivo-vilanova-home.jpg");
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-#servicios ul{
-  display: grid;
-  grid-template-columns: repeat(auto, minmax(250px, 500px));
-  grid-auto-flow: column;
-  list-style: none;
-  justify-content: space-around;
-}
-
-#servicios ul li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 black;
-}
-
 .icono {
   max-width: 30px;
 }
@@ -91,6 +52,18 @@ h1 {
   letter-spacing: 4px;
 }
 
+h2 {
+  font-size: calc(var(--size-h1) - var(--size-h1)/4);
+}
+
+h3 {
+  font-size: calc(var(--size-h1) - var(--size-h1)/2);
+}
+
+a {
+  color: var(--color-secundario);
+}
+
 /* h2 tamaño fuente h1 menos 1/4 del tamaño de la fuente de h1*/
 
 /* h3 tamaño fuente h1 menos 1/2 del tamaño de la fuente de h1*/
@@ -101,13 +74,41 @@ móvil (hasta 720px) para separar el contenido del pie. Ver video */
 /* los enlaces que no son hijos de un nav tendrán como color de texto color-secundario*/
 /*=====  End of Estilos generales  ======*/
 
-
 /*=============================================
 =            Estilos de la cabecera            =
 =============================================*/
 header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  background-color: var(--color-fondo);
   max-width: 2560px;
   padding: 0 1rem;
+  opacity: .8;
+}
+
+.menu {
+  max-width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.menu li {
+  font-size: 1.7rem;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  transition: .5s ease-in-out;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
 }
 
 .logo {
@@ -126,13 +127,21 @@ header {
 main {
   width: 100%;
   padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#nosotros, #visitas {
+  max-width: 1400px;
+  padding: 1rem;
 }
 
 #nosotros h3 {
   color: var(--color-secundario-oscuro);
 }
 
-Copy
 /* para todos los h2 del main,
  que no estén después de un h1 color color-primario y alineado al centro
 */
@@ -144,17 +153,28 @@ de 1400px*/
 =            Estilos de la portada            =
 =============================================*/
 
+#portada {
+  width: 100%;
+  height: 939px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(11, 10, 31, 0.712), rgba(11, 10, 31, 0.726)), url("../../assets/img/puertodeportivo-vilanova.jpg");
+  color: white;
+}
+
+#portada p {
+  max-width: 90%;
+  text-align: center;
+}
+
 /*La portada tendrá como fondo la imagen puertodeportivo-vilanova.jpg
 y el gradiente
 Fuente del texto 1.2rem
 
 El texto de la portada ocupará como máximo el 90% del contenedor para móvi y dede
 720px el 70%*/
-
-#portada {
-  height: 939px;
-  background: linear-gradient(rgba(11, 10, 31, 0.712), rgba(11, 10, 31, 0.726));
-}
 
 
 /*=====  End of Estilos de la portada  ======*/
@@ -177,6 +197,15 @@ El texto de la portada ocupará como máximo el 90% del contenedor para móvi y 
   gap: .5rem;
 }
 
+#servicios {
+  width: 100%;
+  height: 75vh;
+  background-image: url("../../assets/img/puertodeportivo-vilanova-home.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 
 
 /*=============================================
@@ -196,7 +225,51 @@ El texto de la portada ocupará como máximo el 90% del contenedor para móvi y 
    Boton 1.5rem transparente.
    */
 
+   .cards{
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(auto, minmax(250px, 500px));
+    grid-auto-flow: column;
+    list-style: none;
+    gap: 2.5rem;
+  }
+  
+  .card {
+    max-width: 370px;
+    width: 370px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 black;
+    animation: rotar .5s linear;
+    -moz-animation: rotar .5s linear;
+    -o-animation: rotar .5s linear;
+    -webkit-animation: rotar .5s linear;
+  }
 
+  .card:hover {
+    border: 1px solid var(--color-secundario);
+  }
+
+  .card img {
+    max-width: 55%;
+  }
+
+  .card button {
+    font-size: calc(var(--size-h1) - var(--size-h1)/2);
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid var(--color-secundario);
+    transition: .5s ease-in-out;
+  }
+
+  .card button:hover {
+    background-color: var(--color-secundario);
+    color: white;
+  }
 
 
 /*=====  End of Estilos del main  ======*/
@@ -210,14 +283,43 @@ El texto de la portada ocupará como máximo el 90% del contenedor para móvi y 
 
 /* los li tienen un ancho de 200px */
 
-/* .sbub-info espaciado 3px peso de la fuente 600*/
+/* .sub-info espaciado 3px peso de la fuente 600*/
 
 /* SOLO PARA MOVIL, tiene que aparecer antes de cada li salvo el primero
 el ancla (anchor.svg). Tiene unas dimensiones de 2x2 rem */
 
+#visitas {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 
+#visitas ul{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
 
+#visitas ul li {
+  font-size: 1.4rem;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.sub-info {
+  color: var(--color-secundario);
+  text-transform: uppercase;
+  font-weight: 600px;
+  letter-spacing: 3px;
+}
 
 
 /*=============================================
@@ -237,5 +339,36 @@ footer {
 =            Media Queries            =
 =============================================*/
 /* Para pantallas desde 720px. Fuente 16px tamaño h1 4rem */
+
+@media screen and (min-width: 720px) {
+  #portada {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #portada p {
+    max-width: 70%;
+  }
+
+  #nosotros {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #servicios {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #servicios ul li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #visitas {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 /*=====  End of Media Queries  ======*/

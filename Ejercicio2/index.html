@@ -4,54 +4,63 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arousa Mar - Club naútico</title>
-  <link rel="stylesheet" href="./src/style.css">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="./src/css/modal.css">
 
 </head>
 
 <body>
-  <!--portada-->
   <header>
-    <h1>Arousa Mar</h1>
-    <h2>Puerto Deportivo</h2>
-    <p>El considerable atractivo de las Rías Gallegas y sus características,
-      que las permiten navegables durante todos los días del año,
-      hacen que cada vez los navegantes demanden más puntos de atraque en ellas.
-      Así, en medio de la Ría de Arousa y de reciente construcción se encuentra
-      el Puerto Deportivo de Vilanova de Arousa.
-    </p>
+    <ul class="menu">
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="footer">Contacto</a></li>
+      <li><a href="" onclick="window.comprar.showModal();">Reservas</a></li>
+    </ul>
   </header>
   <main>
+    <!--portada-->
+    <section id="portada">
+      <h1>Arousa Mar</h1>
+      <h2>Puerto Deportivo</h2>
+      <p>El considerable atractivo de las Rías Gallegas y sus características,
+        que las permiten navegables durante todos los días del año,
+        hacen que cada vez los navegantes demanden más puntos de atraque en ellas.
+        Así, en medio de la Ría de Arousa y de reciente construcción se encuentra
+        el Puerto Deportivo de Vilanova de Arousa.
+      </p>
+    </section>
     <div id="nosotros">
       <h2>Arousa Mar</h2>
       <h3>42º 33´ 97´´ N - 08º 49´ 99´´ W</h3>
       <video controls poster="./assets/img/mapaCopia.png" class="video" preload="metadata" 
-         aria-details="transcription" aria-label="Arousa Mar">
-          <source src="./assets/videos/Puerto_deportivo.mp4" type="video/mp4">
-          <track kind="subtitles" src="./assets/videos/subtitulos_es.vtt" label="Español" srclang="es" default>
-          <p>
-            <em>
-              Su navegador no soporta HTML:5. Para reproducir este video, puede descargarlo con el siguiente 
-              <a href="./assets/videos/Puerto_deportivo.mp4">enlace</a>.
-            </em>
-          </p>
-         </video>
+        aria-details="transcription" aria-label="Arousa Mar">
+        <source src="./assets/videos/Puerto_deportivo.mp4" type="video/mp4">
+        <track kind="subtitles" src="./assets/videos/subtitulos_es.vtt" label="Español" srclang="es" default>
+        <p>
+          <em>
+            Su navegador no soporta HTML:5. Para reproducir este video, puede descargarlo con el siguiente 
+            <a href="./assets/videos/Puerto_deportivo.mp4">enlace</a>.
+          </em>
+        </p>
+      </video>
     </div>
   
     <!-- Servicios-->
     <section id="servicios">
       <h2>Servicios</h2>
-      <ul>
-        <li>
+      <ul class="cards">
+        <li class="card">
           <img src="./assets/img/steering.png">
           <h3>Para todos los marineros</h3>
           <button type="submit">Informacion</button>
         </li>
-        <li>
+        <li class="card">
           <img src="./assets/img/rope.png">
           <h3>Para tu confort</h3>
           <button type="submit">Informacion</button>
         </li>
-        <li>
+        <li class="card">
           <img src="./assets/img/mask.png">
           <h3>Para estar al día</h3>
           <button type="submit">Informacion</button>
@@ -59,7 +68,7 @@
       </ul>
     </section>
   
-    <section id="visitantes">
+    <section id="visitas">
       <h2>Embarcaciones visitantes</h2>
       <ul>
         <li>
@@ -81,29 +90,37 @@
       </ul>
     </section>
     <!--modal-->
-    <div id="reserva">
+    <dialog id="reserva" class="modal">
       <section>
         <h2>Reservas</h2>
-        <button class="btn__close">X</button>
+        <button class="btn__close">
+          <i onclick="window.comprar.close();">X</i>
+        </button>
         <form action="#" class="form">
           <!-- todos los campos son requeridos menos el nombre de contacto-->
           <label>Nombre</label>
           <input type="text" name="barco" id="barco">
           <p>
             <label>Eslora (m)</label>
+            <input type="number" name="eslora" id="eslora" min="2.5" max="16.0" value="6.0">
             <!-- Campo numerico valor mínimo 2.5 máximo 16.0, valor por defecto 6.0 Step de .1-->
             <label>Calado (m)</label>
+            <input type="number" name="calado" id="calado" min="0" max="3" value="2">
             <!-- Campo numerico valor mínimo 0 máximo 3, valor por defecto 6.0 Step de .1-->
             <label>Manga (m)</label>
+            <input type="number" name="manga" id="manga" min="1.5" max="6" value="2.0">
             <!-- Campo numerico valor mínimo 1.5 máximo 6, valor por defecto 2.0 Step de .1-->
           </p>
           <label>Fecha llegada</label>
+          <input type="date" name="llegada" id="llegada" min="12-03-2025">
+          <label>Fecha salida</label>
+          <input type="date" name="salida" id="salida" min="12-03-2025">
           <!-- campo fecha llegada. Tipo fecha, fecha mínima el 12-03-2025-->
           <!-- campo fecha salida. Tipo fecha, fecha mínima el 14-03-2025-->
   
         </form>
       </section>
-    </div>
+    </dialog>
   </main>
   <footer>
     <address>
