@@ -15,7 +15,7 @@
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#footer">Contacto</a></li>
-      <li><a href="" onclick="window.comprar.showModal();">Reservas</a></li>
+      <li><a onclick="window.reserva.showModal();">Reservas</a></li>
     </ul>
   </header>
   <main>
@@ -94,30 +94,52 @@
       <section>
         <h2>Reservas</h2>
         <button class="btn__close">
-          <i onclick="window.comprar.close();">X</i>
+          <i onclick="window.reserva.close();">X</i>
         </button>
         <form action="#" class="form">
           <!-- todos los campos son requeridos menos el nombre de contacto-->
-          <label>Nombre</label>
-          <input type="text" name="barco" id="barco">
-          <p>
-            <label>Eslora (m)</label>
-            <input type="number" name="eslora" id="eslora" min="2.5" max="16.0" value="6.0">
-            <!-- Campo numerico valor mínimo 2.5 máximo 16.0, valor por defecto 6.0 Step de .1-->
-            <label>Calado (m)</label>
-            <input type="number" name="calado" id="calado" min="0" max="3" value="2">
-            <!-- Campo numerico valor mínimo 0 máximo 3, valor por defecto 6.0 Step de .1-->
-            <label>Manga (m)</label>
-            <input type="number" name="manga" id="manga" min="1.5" max="6" value="2.0">
-            <!-- Campo numerico valor mínimo 1.5 máximo 6, valor por defecto 2.0 Step de .1-->
-          </p>
-          <label>Fecha llegada</label>
-          <input type="date" name="llegada" id="llegada" min="12-03-2025">
-          <label>Fecha salida</label>
-          <input type="date" name="salida" id="salida" min="12-03-2025">
-          <!-- campo fecha llegada. Tipo fecha, fecha mínima el 12-03-2025-->
-          <!-- campo fecha salida. Tipo fecha, fecha mínima el 14-03-2025-->
-  
+          <fieldset id="datosBarco">
+            <legend>Datos del barco</legend>
+            <label>Nombre</label>
+            <input type="text" name="barco" id="barco" placeholder="Buena Suerte" pattern="[a-zA-ZáéíóúñÑÁÉÍÓÚ]{2,15}" required>
+            <p>
+              <label>Eslora (m)</label>
+              <input type="number" name="eslora" id="eslora" min="2.5" max="16.0" value="6.0" required>
+              <!-- Campo numerico valor mínimo 2.5 máximo 16.0, valor por defecto 6.0 Step de .1-->
+              <label>Calado (m)</label>
+              <input type="number" name="calado" id="calado" min="0" max="3" value="2" required>
+              <!-- Campo numerico valor mínimo 0 máximo 3, valor por defecto 6.0 Step de .1-->
+              <label>Manga (m)</label>
+              <input type="number" name="manga" id="manga" min="1.5" max="6" value="2.0" required>
+              <!-- Campo numerico valor mínimo 1.5 máximo 6, valor por defecto 2.0 Step de .1-->
+            </p>
+          </fieldset>
+          <fieldset id="fechas">
+            <legend>Fecha de reserva</legend>
+            <p>
+              <!-- campo fecha llegada. Tipo fecha, fecha mínima el 12-03-2025-->
+              <label>Fecha llegada</label>
+              <input type="date" name="llegada" id="llegada" min="12-03-2025" required>
+            </p>
+            <p>
+              <!-- campo fecha salida. Tipo fecha, fecha mínima el 14-03-2025-->
+              <label>Fecha salida</label>
+              <input type="date" name="salida" id="salida" min="12-03-2025" required>
+            </p>
+          </fieldset>
+          <fieldset id="datosContacto">
+            <legend>Datos de contacto</legend>
+            <p>
+              <label>Nombre</label>
+              <input type="text" name="nombre" id="nombre" placeholder="Iago Oubiña Dios" pattern="[a-zA-ZáéíóúñÑÁÉÍÓÚ]{2,15}">
+            </p>
+            <p>
+              <label>Correo electrónico</label>
+              <input type="email" name="email" id="email" placeholder="iagooudi@gmail.com" required>
+            </p>
+          </fieldset>
+          <button type="submit">Enviar</button>
+          <button type="">Limpiar</button>
         </form>
       </section>
     </dialog>

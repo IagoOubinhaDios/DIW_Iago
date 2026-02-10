@@ -20,8 +20,12 @@ dialog {
   background-color: var(--color-fondo-claro);
 }
 
+dialog section h2 {
+  justify-self: center;
+  align-self: center;
+}
+
 form {
-  max-width: 550px;
   min-width: 280px;
   box-shadow: 4px 4px 5px;
   font-size: 1.2rem;
@@ -33,15 +37,25 @@ label {
   min-width: 100px;
 }
 
-
 input {
   padding: .25rem 0.1rem;
+}
+
+input:focus:not(placeholder-shown):valid {
+  outline-color: green;
+}
+
+input:focus:not(placeholder-shown):invalid {
+  outline-color: orangered;
 }
 
 /* los campos de numéricos tendrá un ancho máximo 3.25rem. 
 Para pantallas de 720px para arriba: el último campo
 de tipo numerico tendrá un margen superior de 1 rem */
 
+input[type='number'] {
+  max-width: 3.25rem;
+}
 
 
 
